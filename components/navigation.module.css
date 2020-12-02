@@ -1,0 +1,10 @@
+.header >ul{
+    display:flex;
+    text-decoration: none;
+    list-style: none;
+  
+}
+
+.link{
+    color: #0070f3;
+}
