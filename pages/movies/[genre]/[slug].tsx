@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 // used for publicRunTimeconfig
 import getConfig from 'next/config'
-import axios from "axios"
+import axios from "axios";
  
 export default function Movie(props){
     console.log(props.movie)
@@ -25,7 +25,7 @@ export default function Movie(props){
 
 // publicRuntime config used to present process.env to be on the client isde as well and serverside. 
 // set up in next.config.js 
-const {publicRuntimeConfig} =getConfig()
+// const {publicRuntimeConfig} =getConfig()
 
 // maybe replace this page with static props as the content doesnt change very much.
 // grabs data accoring to the movie Id 
@@ -47,7 +47,11 @@ export async function getServerSideProps(context){
     // get movies from id later changed it to below getting movie from slug
     // const response = await axios.get(`${publicRuntimeConfig.API_URL}/movies/${id}`)
     // strapi doesnt know how to filter from slug have to use filters => /movies?slug=${slug}
-     const response = await axios.get(`${publicRuntimeConfig.API_URL}/movies?slug=${slug}`)
+    //  const response = await axios.get(`${publicRuntimeConfig.API_URL}/movies?slug=${slug}`)
+
+const {API_URL} = process.env
+
+const response = await axios.get(`${API_URL}//movies?slug=${slug}`)
     
    
   

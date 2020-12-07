@@ -8,20 +8,19 @@ import axios from "axios";
 
 // get static props
 function About(props) {
-  console.log(props.pages)
+   console.log(props.posts)
   return (
       <div>
       <Container fluid="md">
       <h2 >{props.pages.Title}</h2>
             <Row>
-                <Col  style={{justifyContent:'center'}}>
+                <Col style={{justifyContent:'center'}}>
                    {props.pages.Content}
                 </Col>
             </Row>
         </Container>
       
       </div>
- 
   )
 }
 
@@ -33,8 +32,6 @@ export async function getStaticProps(){
 
   const response = await axios.get(`${API_URL}/pages`)
   
- 
-
   return {
     props: {
         pages: response.data[0]
@@ -42,4 +39,5 @@ export async function getStaticProps(){
 }
 
 }
+
 

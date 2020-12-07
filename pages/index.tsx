@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row"
 // style={{display:'flex', justifyContent:'center', margin:'20px'}}
 const Home=(props)=> {
 
-  console.log(props.movies)
+  // console.log(props.movies)
   return (
     <Container fluid>
       <Row style={{justifyContent:'center'}}>
