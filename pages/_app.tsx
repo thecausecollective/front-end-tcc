@@ -10,14 +10,15 @@ import fetch from 'isomorphic-unfetch'
 // all page props get sent to this its like app.js in react.
 // endpoint for updating the pages.
 // The reason that global CSS can't be imported outside of pages/_app.js is that global CSS affects all elements on the page.
-// destrcutured from props
+// destrcutured from props to add the navigation to these props below
 function MyApp({ Component, pageProps, navigation }) {
 
   console.log(navigation)
 
   return(
     <>
-      <Navigation />
+    {/* sending data to navigation component */}
+      <Navigation navigation={navigation} />
       <Component {...pageProps} />
     
   
