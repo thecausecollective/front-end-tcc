@@ -51,7 +51,7 @@ export async function getServerSideProps(context){
 
 const {API_URL} = process.env
 
-const response = await axios.get(`${API_URL}//movies?slug=${slug}`)
+const response = await axios.get(`${API_URL}/movies?slug=${slug}`)
     
    
   
