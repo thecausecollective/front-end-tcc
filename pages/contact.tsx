@@ -8,7 +8,7 @@ import axios from "axios";
 
 // get static props
 function Contact(props) {
-   console.log(props.posts)
+//    console.log(props.posts)
   return (
       <div>
       <Container fluid="md">

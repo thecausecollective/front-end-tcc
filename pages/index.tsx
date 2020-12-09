@@ -26,7 +26,7 @@ const Home=(props)=> {
 }
 
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
   // using dotenv and getting the url from env file.
   const {API_URL} = process.env
 
