@@ -15,10 +15,10 @@ const {API_URL} = process.env
         <>
     <div className="card-container">
         <div >
-        <Card key={props.movie.id} style={{ width: '18rem', textAlign: 'center' }}>
+        <Card style={{ width: '18rem', textAlign: 'center' }}>
         <Card.Img variant="top"src="" />
         <Card.Body>
-            <img className="movie-poster" src={ API_URL + props.movie.poster.url}/>
+            <img className="movie-poster" src={ API_URL + props.movie.poster}/>
         <Card.Title>{props.movie.title}</Card.Title>
         <Button variant="primary">Watch</Button>
      
@@ -31,11 +31,9 @@ const {API_URL} = process.env
             <a>More about this movie</a>
         </Link>
         </Card>
-
-        </div>
-        
+        </div>  
     </div>
-    
+
         </>
     );
 } 
