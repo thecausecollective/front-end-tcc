@@ -7,7 +7,7 @@ import fetch from 'isomorphic-unfetch'
 // style={{display:'flex', justifyContent:'center', margin:'20px'}}
 const Home=(props)=> {
 
-   console.log(props.movies.poster)
+   console.log(props.movies)
   return (
     <Container fluid>
       <Row style={{justifyContent:'center'}}>

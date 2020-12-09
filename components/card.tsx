@@ -18,7 +18,7 @@ const {API_URL} = process.env
         <Card style={{ width: '18rem', textAlign: 'center' }}>
         <Card.Img variant="top"src="" />
         <Card.Body>
-            <img className="movie-poster" src={ API_URL + props.movie.poster}/>
+            <img className="movie-poster" src={ props.movie.poster.url}/>
         <Card.Title>{props.movie.title}</Card.Title>
         <Button variant="primary">Watch</Button>
      
