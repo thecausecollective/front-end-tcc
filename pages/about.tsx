@@ -26,18 +26,18 @@ function About(props) {
 
 export default About
 
-export async function getStaticProps(){
-  // using dotenv and getting the url from env file.
-  const {API_URL} = process.env
+// export async function getStaticProps(){
+//   // using dotenv and getting the url from env file.
+//   const {API_URL} = process.env
 
-  const response = await axios.get(`${API_URL}/pages`)
+//   const response = await axios.get(`${API_URL}/pages`)
   
-  return {
-    props: {
-        pages: response.data[0]
-    }
-}
+//   return {
+//     props: {
+//         pages: response.data[0]
+//     }
+// }
 
-}
+// }
 
 
