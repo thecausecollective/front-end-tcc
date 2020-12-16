@@ -7,15 +7,15 @@ import axios from "axios";
 
 
 // get static props
-function About(props) {
-   console.log(props.movies)
+function OurStories(props) {
+   console.log(props.blogs)
   return (
       <div>
       <Container fluid="md">
-      <h2 >The Blog page</h2>
+  
             <Row>
                 <Col style={{justifyContent:'center'}}>
-                <h2>{props.movies.title}</h2>
+                <h2>{props.blogs.title}</h2>
                 This is the blog page Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime praesentium culpa omnis accusamus vero nam error aliquid ratione fugit distinctio accusantium, mollitia explicabo, magni pariatur possimus enim amet. Vero, eius!
                 </Col>
             </Row>
@@ -25,7 +25,7 @@ function About(props) {
   )
 }
 
-export default About
+export default OurStories
 
 // export async function getStaticProps(){
 //   // using dotenv and getting the url from env file.
@@ -47,13 +47,13 @@ export async function getStaticProps(){
 
   // const res = await fetch(`${API_URL}/movies`)
   // const response = await res.json()
-  const response = await axios.get(`${API_URL}/movies`)
+  const response = await axios.get(`${API_URL}/blogs`)
   
  
 
   return {
     props: {
-        movies: response.data[0]
+        blogs: response.data[0]
     }
 }
 

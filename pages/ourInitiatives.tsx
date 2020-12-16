@@ -7,15 +7,15 @@ import axios from "axios";
 
 
 // get static props
-function Contact(props) {
+function OurInitiatives(props) {
    console.log(props.pages)
   return (
       <div>
       <Container fluid="md">
-     {props.pages.Title}
+      <h2>{props.pages.Title}</h2>
             <Row>
                 <Col style={{justifyContent:'center'}}>
-                {props.pages.description}
+                <p>{props.pages.description}</p>
                 </Col>
             </Row>
         </Container>
@@ -24,20 +24,20 @@ function Contact(props) {
   )
 }
 
-export default Contact
+export default OurInitiatives
 
 export async function getStaticProps(){
   // using dotenv and getting the url from env file.
   const {API_URL} = process.env
 
   const response = await axios.get(`${API_URL}/pages`)
- 
+  
   return {
     props: {
-        pages: response.data[4]
-        
+        pages: response.data[5]
     }
-    
 }
 
 }
+
+

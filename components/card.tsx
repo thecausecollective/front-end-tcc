@@ -18,8 +18,8 @@ const {API_URL} = process.env
         <Card style={{ width: '18rem', textAlign: 'center' }}>
         <Card.Img variant="top"src="" />
         <Card.Body>
-            <img className="movie-poster" src={ props.movie.poster.url}/>
-        <Card.Title>{props.movie.title}</Card.Title>
+            {/* <img className="movie-poster" src={ props.movie.poster.url}/> */}
+        {/* <Card.Title>{props.movie.title}</Card.Title> */}
         <Button variant="primary">Watch</Button>
      
         </Card.Body>
@@ -27,9 +27,9 @@ const {API_URL} = process.env
         {/* /movies/${props.movie.genre.slug}/${props.movie.slug} will be the actual slugs from API pulled from strapi*/}
         {/* href = the way to find the link
         as = the link it will show up as in the URL */}
-        <Link href="/movies/[genre]/[slug]" as={`/movies/${props.movie.genre.slug}/${props.movie.slug}`}>
+        {/* <Link href="/movies/[genre]/[slug]" as={`/movies/${props.movie.genre.slug}/${props.movie.slug}`}>
             <a>More about this movie</a>
-        </Link>
+        </Link> */}
         </Card>
         </div>  
     </div>

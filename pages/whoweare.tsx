@@ -8,14 +8,14 @@ import axios from "axios";
 
 // get static props
 function About(props) {
-   console.log(props.posts)
+   console.log(props.pages)
   return (
       <div>
       <Container fluid="md">
-      <h2 >{props.pages.Title}</h2>
+      <h2>{props.pages.Title}</h2>
             <Row>
                 <Col style={{justifyContent:'center'}}>
-                   {props.pages.Content}
+                <p>{props.pages.description}</p>
                 </Col>
             </Row>
         </Container>
@@ -26,18 +26,18 @@ function About(props) {
 
 export default About
 
-// export async function getStaticProps(){
-//   // using dotenv and getting the url from env file.
-//   const {API_URL} = process.env
+export async function getStaticProps(){
+  // using dotenv and getting the url from env file.
+  const {API_URL} = process.env
 
-//   const response = await axios.get(`${API_URL}/pages`)
+  const response = await axios.get(`${API_URL}/pages`)
   
-//   return {
-//     props: {
-//         pages: response.data[0]
-//     }
-// }
+  return {
+    props: {
+        pages: response.data[0]
+    }
+}
 
-// }
+}
 
 

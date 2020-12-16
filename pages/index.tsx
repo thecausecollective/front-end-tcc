@@ -9,39 +9,40 @@ const Home=(props)=> {
 
    console.log(props.movies)
   return (
-    <Container fluid>
-      <Row style={{justifyContent:'center'}}>
-      {props.movies.map(movie=>(
-        <div style={{margin:'2rem'}} >
-            <Card
-            key={movie.id}
-            movie={movie}
-            />
-        </div>
-      ))}
-      </Row>
+    <h2> home page</h2>
+//     <Container fluid>
+//       <Row style={{justifyContent:'center'}}>
+//       {props.movies.map(movie=>(
+//         <div style={{margin:'2rem'}} >
+//             <Card
+//             key={movie.id}
+//             movie={movie}
+//             />
+//         </div>
+//       ))}
+//       </Row>
     
- </Container>
+//  </Container>
   )
 }
 
 
-export async function getStaticProps(){
-  // using dotenv and getting the url from env file.
-  const {API_URL} = process.env
+// export async function getStaticProps(){
+//   // using dotenv and getting the url from env file.
+//   const {API_URL} = process.env
 
-  // const res = await fetch(`${API_URL}/movies`)
-  // const response = await res.json()
-  const response = await axios.get(`${API_URL}/movies`)
+//   // const res = await fetch(`${API_URL}/movies`)
+//   // const response = await res.json()
+//   const response = await axios.get(`${API_URL}/movies`)
   
  
 
-  return {
-    props: {
-        movies: response.data
-    }
-}
+//   return {
+//     props: {
+//         movies: response.data
+//     }
+// }
 
-}
+// }
 
 export default Home

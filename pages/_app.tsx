@@ -13,7 +13,7 @@ import fetch from 'isomorphic-unfetch'
 // destrcutured from props to add the navigation to these props below
 function MyApp({ Component, pageProps, navigation }) {
 
-  console.log(navigation)
+  // console.log(navigation)
 
   return(
     <>

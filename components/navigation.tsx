@@ -21,22 +21,31 @@ export default function Navigation (props){
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-        <ul className="nav" >
-        {props.navigation.map(item=>(
-          <li key={props.navigation.id}>
-            <Link href={item.slug}>
-            <Nav.Link href={item.slug}>{item.title}</Nav.Link>
-            </Link>
-        </li>
-        ))}
-      </ul>
+      <ul className="nav" >
+{props.navigation.map(item=>(
+  <li key={props.navigation.id}>
+    <Link href={item.slug}>
+    <Nav.Link href={item.slug}>{item.title}</Nav.Link>
+    </Link>
+</li>
+))}
+</ul>
     
         </Nav>
       
       </Navbar.Collapse>
     </Navbar>
-    </>
+  </>
 )
 }
 
 
+{/* <ul className="nav" >
+{props.navigation.map(item=>(
+  <li key={props.navigation.id}>
+    <Link href={item.slug}>
+    <Nav.Link href={item.slug}>{item.title}</Nav.Link>
+    </Link>
+</li>
+))}
+</ul> */}
