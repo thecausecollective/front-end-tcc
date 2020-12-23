@@ -5,21 +5,19 @@ import Link from "next/link"
 import "./card.module.css"
 
 
-
-
-
 export default function Header(props){
+    // needed for when calling images in locla dev.
 const {API_URL} = process.env
-
+console.log(props.blog);
     return(
         <>
     <div className="card-container">
-        <div >
+        <div key={props.blog.id} >
         <Card style={{ width: '18rem', textAlign: 'center' }}>
         <Card.Img variant="top"src="" />
         <Card.Body>
-            {/* <img className="movie-poster" src={ props.movie.poster.url}/> */}
-        {/* <Card.Title>{props.movie.title}</Card.Title> */}
+            <img className="movie-poster" src={ API_URL + props.blog.poster.url}/>
+        <Card.Title>{props.blog.title}</Card.Title>
         <Button variant="primary">Watch</Button>
      
         </Card.Body>

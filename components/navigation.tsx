@@ -17,7 +17,7 @@ export default function Navigation (props){
     return(
 <>
       <Navbar style={{textDecoration:"none"}} bg="light" expand="lg">
-      <Navbar.Brand href="/">Mock-APPP</Navbar.Brand>
+      <Navbar.Brand href="/">The cause collective</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">

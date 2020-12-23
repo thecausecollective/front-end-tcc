@@ -2,7 +2,9 @@ import Link from 'next/link'
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
+import Card from "../components/storycard"
 import axios from "axios";
+
 // import Header from "../components/header" 
 
 
@@ -15,9 +17,16 @@ function OurStories(props) {
   
             <Row>
                 <Col style={{justifyContent:'center'}}>
-                <h2>{props.blogs.title}</h2>
-                This is the blog page Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime praesentium culpa omnis accusamus vero nam error aliquid ratione fugit distinctio accusantium, mollitia explicabo, magni pariatur possimus enim amet. Vero, eius!
-                </Col>
+                {props.blogs.map(blog=>(
+        <div style={{margin:'2rem'}} >
+            <Card
+            key={blog.id}
+            blog={blog}
+            />
+        </div>
+      ))}
+              
+        </Col>
             </Row>
         </Container>
       
@@ -27,19 +36,6 @@ function OurStories(props) {
 
 export default OurStories
 
-// export async function getStaticProps(){
-//   // using dotenv and getting the url from env file.
-//   const {API_URL} = process.env
-
-//   const response = await axios.get(`${API_URL}/pages`)
-  
-//   return {
-//     props: {
-//         pages: response.data[0]
-//     }
-// }
-
-// }
 
 export async function getStaticProps(){
   // using dotenv and getting the url from env file.
@@ -53,7 +49,7 @@ export async function getStaticProps(){
 
   return {
     props: {
-        blogs: response.data[0]
+        blogs: response.data
     }
 }
 

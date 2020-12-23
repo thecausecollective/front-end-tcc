@@ -1,6 +1,6 @@
 
 import axios from "axios";
-import Card from "../components/card"
+import Card from "../components/storycard"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import fetch from 'isomorphic-unfetch'
