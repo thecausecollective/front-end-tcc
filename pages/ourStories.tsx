@@ -14,10 +14,9 @@ function OurStories(props) {
   return (
       <div>
       <Container fluid="md">
-  
-            <Row>
-                <Col style={{justifyContent:'center'}}>
-                {props.blogs.map(blog=>(
+        <Row >
+          <Col style={{display: "flex", justifyContent: "center"}}>
+          {props.blogs.map(blog=>(
         <div style={{margin:'2rem'}} >
             <Card
             key={blog.id}
@@ -27,8 +26,8 @@ function OurStories(props) {
       ))}
               
         </Col>
-            </Row>
-        </Container>
+      </Row>
+    </Container>
       
       </div>
   )

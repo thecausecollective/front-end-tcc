@@ -16,7 +16,7 @@ console.log(props.blog);
         <Card style={{ width: '18rem', textAlign: 'center' }}>
         <Card.Img variant="top"src="" />
         <Card.Body>
-            <img className="movie-poster" src={props.blog.poster.url}/>
+            <img className="movie-poster" src={props.blog.poster[0].url}/>
         <Card.Title>{props.blog.title}</Card.Title>
         <Button variant="primary">Watch</Button>
      
