@@ -18,7 +18,9 @@ console.log(props.blog);
         <Card.Body>
             <img className="movie-poster" src={props.blog.poster[0].url}/>
         <Card.Title>{props.blog.title}</Card.Title>
-        <Button variant="primary">Watch</Button>
+        <Button variant="primary" >
+          <Link href="/blog/[slug]" as={`/blog/${props.blog.slug}`}>Read story</Link>
+        </Button>
      
         </Card.Body>
         {/* /movies/[genre]/[slug] will act as the template] */}

@@ -25,7 +25,7 @@ export default function Movie(props){
 
 // publicRuntime config used to present process.env to be on the client isde as well and serverside. 
 // set up in next.config.js 
-// const {publicRuntimeConfig} =getConfig()
+// const {publicRuntimeConfig} = getConfig()
 
 // maybe replace this page with static props as the content doesnt change very much.
 // grabs data accoring to the movie Id 

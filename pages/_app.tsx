@@ -30,12 +30,12 @@ function MyApp({ Component, pageProps, navigation }) {
 export default MyApp
 
 // can yuse getserverside props here easily, we want navigation data throught out all of the site/
-// need to use get initalprops as its does both serverside and clients ide
+// need to use get initalprops as its does both serverside and clients side
 const {publicRuntimeConfig} =getConfig()
 MyApp.getInitialProps = async (context)=>{
   // need public runtime copnfig because we nee fto acces APIuRL on clinet side.
-  console.log(context.query)
-  // publicruntime cofig needs the env variable on clinet side and serverside at build time.
+  // console.log(context.query)
+  // publicruntime config needs the env variable on clinet side and serverside at build time.
   // axios wasnt working for some reason.
   const res = await fetch(`${publicRuntimeConfig.API_URL}/navigations`)
   const navigation = await res.json()
