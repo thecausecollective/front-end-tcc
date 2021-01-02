@@ -72,7 +72,7 @@ const {publicRuntimeConfig} =getConfig()
 export async function getServerSideProps (context){
    
     const {API_URL} = process.env
-    // need public runtime copnfig because we nee fto acces APIuRL on clinet side.//
+    // need public runtime copnfig because we nee fto acces APIuRL on clinet side./
     // console.log(context)
     const slug = context.query.slug
     // publicruntime cofig needs the env variable on clinet side and serverside at build time.
