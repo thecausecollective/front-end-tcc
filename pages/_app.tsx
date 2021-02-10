@@ -11,7 +11,7 @@ import fetch from 'isomorphic-unfetch'
 // endpoint for updating the pages.
 // The reason that global CSS can't be imported outside of pages/_app.js is that global CSS affects all elements on the page.
 // destrcutured from props to add the navigation to these props below
-function MyApp({ Component, pageProps, navigation }) {
+function MyApp({ Component, pageProps,navigation }) {
 
   // console.log(navigation)
 

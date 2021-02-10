@@ -6,14 +6,14 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import getConfig from 'next/config'
 import navigation from "navigation.module.css"
-// as = what yu would liek your link to look like
+// as = what you would liek your link to look like
 // href is the atual path to your template
 // the other normal Link pages will do a static full page reload
 
 export default function Navigation (props){
 
    const router = useRouter()
-     console.log( props.navigation)
+     console.log(props.navigation)
     return(
 <>
       <Navbar style={{textDecoration:"none"}} bg="light" expand="lg">
@@ -29,6 +29,7 @@ export default function Navigation (props){
             </Link>
         </li>
         ))}
+       
       </ul>
     
         </Nav>
