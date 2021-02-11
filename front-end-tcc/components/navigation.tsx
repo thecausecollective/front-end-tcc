@@ -13,17 +13,21 @@ import navigation from "navigation.module.css"
 export default function Navigation (props){
 
    const router = useRouter()
-     console.log(props.navigation)
+    //  console.log(props.navigation)
     return(
 <>
-      <Navbar style={{textDecoration:"none"}} bg="light" expand="lg">
+      {/* <Navbar style={{textDecoration:"none"}} bg="light" expand="lg">
       <Navbar.Brand href="/">The cause collective</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-        <ul className="nav" >
+        <Nav className="mr-auto"> */}
+        <ul className="nav py-6 flex bg-green-400 " >
+          <div className="font-bold">
+            <Link  href="/">The Cause collective</Link>
+          </div>
+         
         {props.navigation.map(item=>(
-          <li key={props.navigation.id}>
+          <li className="px-2" key={props.navigation.id}>
             <Link href={item.slug}>
             <Nav.Link href={item.slug}>{item.title}</Nav.Link>
             </Link>
@@ -32,10 +36,10 @@ export default function Navigation (props){
        
       </ul>
     
-        </Nav>
+        {/* </Nav>
       
       </Navbar.Collapse>
-    </Navbar>
+    </Navbar> */}
     </>
 )
 }

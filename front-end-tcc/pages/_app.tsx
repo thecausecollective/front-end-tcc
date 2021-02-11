@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import Navigation from '../components/navigation'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import "tailwindcss/tailwind.css";
 import axios from "axios";
 import getConfig from 'next/config'
 import fetch from 'isomorphic-unfetch'

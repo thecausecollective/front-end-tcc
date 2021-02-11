@@ -9,7 +9,7 @@ import axios from "axios";
 
 
 // get static props
-function OurStories(props) {
+function Ngavaka(props) {
    console.log(props.blogs)
   return (
       <div>
@@ -33,7 +33,7 @@ function OurStories(props) {
   )
 }
 
-export default OurStories
+export default Ngavaka
 
 
 export async function getStaticProps(){
