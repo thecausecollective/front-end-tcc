@@ -1,7 +1,5 @@
-
 import Link from 'next/link';
 import { useState } from 'react';
-
 import Nav from 'react-bootstrap/Nav'
 
 // as = what you would liek your link to look like
@@ -11,7 +9,7 @@ import Nav from 'react-bootstrap/Nav'
 
 export default function Navigation (props){
 
-  console.log(props.navigation[0].title)
+  // console.log(props.navigation[0].title)
   const [active, setActive] = useState(false);
 
   const handleMobileButton = () => {
@@ -27,16 +25,17 @@ export default function Navigation (props){
 
     return(
     <>
-    <nav className='flex items-center flex-wrap bg-green-400 p-6 '>
+    <nav className='flex items-center flex-wrap bg-green-400 p-6'>
           <div className="font-bold text-xl">
             <Link  href="/">The Cause collective</Link>
           </div>
+          
        {/* mobile-button */}
         <button
           className=' inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
           onClick={handleMobileButton}
         >
-          <svg
+       <svg
             className='w-6 h-6'
             fill='none'
             stroke='currentColor'
@@ -55,23 +54,24 @@ export default function Navigation (props){
         <div
           className={`${
             active ? '' : 'hidden'
-          }   w-full lg:block lg:flex-grow lg:w-auto`}
+          }   w-full lg:w-auto  `}
         >
           {/* nav-beginning */}
-       
-         <ul className=" lg:flex items-center flex-wrap " >
-           <li className="px-4 hover:text-white outline-none  hover:bg-green-600 hover:rounded-lg hover:border-solid">
+    
+         <ul className=" lg:flex items-center flex-wrap  " >
+           <li className="flex px-4 outline-none  hover:bg-green-600 hover:rounded-lg hover:border-solid">
            <button
            onClick={handleAboutButton}
            >{props.navigation[0].title}
-          <ul className={`${
-            activeAbout ? '' : 'hidden'
-          }   w-full lg:block lg:flex-grow lg:w-auto`}>
-            <li >{props.navigation[4].title}</li>
-            <li >{props.navigation[5].title}</li>
+          <ul className={`${ 
+            activeAbout ? '' : ' hidden transform scale-0 transition-all duration-150 ease-in-out group-hover:scale-100  '
+          }  w-full lg:w-auto`}>
+            <li className="  lg:absolute">{props.navigation[4].title}</li>
+            <li className="  lg:absolute lg:mt-6 sm:mt-0">{props.navigation[5].title}</li>
           </ul>
+         
            </button>
-          
+         
            </li>
            <li>
            <Link href="/">{props.navigation[1].title}</Link>
@@ -82,10 +82,15 @@ export default function Navigation (props){
            <li>
            <Link href="/">{props.navigation[3].title}</Link>
            </li>
-           
-          
-        
-          {/* {props.navigation.map(item=>(
+        </ul> 
+        </div>
+      </nav>
+    </>
+)
+}
+
+
+  {/* {props.navigation.map(item=>(
           <li className="px-4 hover:text-white outline-none  hover:bg-green-600 hover:rounded-lg hover:border-solid" key={props.navigation.id}>
             <Link href={item.slug}>
               
@@ -96,13 +101,5 @@ export default function Navigation (props){
             </Link>
           </li>
           ))} */}
-        
-        </ul> 
-        </div>
-      </nav>
-    </>
-)
-}
-
 
 

@@ -7,7 +7,7 @@ import fetch from 'isomorphic-unfetch'
 // style={{display:'flex', justifyContent:'center', margin:'20px'}}
 const Home=(props)=> {
 
-   console.log(props.movies)
+  //  console.log(props.movies)
   return (
     <h2> home page</h2>
 //     <Container fluid>
