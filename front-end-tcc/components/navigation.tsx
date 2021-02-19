@@ -57,7 +57,7 @@ export default function Navigation (props){
             active ? '' : 'hidden'
           }   w-full lg:w-auto  `}
         >
-          {/* nav-beginning */}
+          {/* nav-beginning bb*/}
           <ul className=" lg:flex items-center flex-wrap  " >
            <li className="flex px-4 outline-none  hover:bg-green-600 hover:rounded-lg hover:border-solid">
            <button
