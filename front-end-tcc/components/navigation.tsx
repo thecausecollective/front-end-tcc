@@ -26,10 +26,10 @@ export default function Navigation (props){
     return(
     <>
     <nav className='flex items-center flex-wrap bg-green-400 p-6'>
-          <div className="font-bold text-xl">
+         
+    <div className="font-bold text-xl">
             <Link  href="/">The Cause collective</Link>
-          </div>
-          
+          </div> 
        {/* mobile-button */}
         <button
           className=' inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
@@ -50,6 +50,7 @@ export default function Navigation (props){
             />
           </svg>
         </button>
+       
         {/*Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
         <div
           className={`${
@@ -57,8 +58,7 @@ export default function Navigation (props){
           }   w-full lg:w-auto  `}
         >
           {/* nav-beginning */}
-    
-         <ul className=" lg:flex items-center flex-wrap  " >
+          <ul className=" lg:flex items-center flex-wrap  " >
            <li className="flex px-4 outline-none  hover:bg-green-600 hover:rounded-lg hover:border-solid">
            <button
            onClick={handleAboutButton}
@@ -83,6 +83,7 @@ export default function Navigation (props){
            <Link href="/">{props.navigation[3].title}</Link>
            </li>
         </ul> 
+         
         </div>
       </nav>
     </>
